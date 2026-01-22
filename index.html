@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IELTS Listening Mock Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body { font-family: Arial, sans-serif; background:#f2f2f2; margin:0; }
+header { background:#000; color:#fff; padding:15px; text-align:center; position:relative; }
+header .inst { position:absolute; left:15px; top:15px; font-weight:bold; }
+.container { max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:6px; }
+.box { border:2px solid #000; padding:20px; line-height:1.8; }
+input[type="text"], input[type="email"], input[type="number"], input[type="date"] { width:250px; padding:5px; }
+input.wrong { border:2px solid red; background:#ffe5e5; }
+.mcq { margin:15px 0; }
+.mcq.wrong { border:2px solid red; padding:10px; }
+button { padding:10px 20px; margin:10px 5px; font-size:16px; }
+.hidden { display:none; }
+.result { font-size:18px; font-weight:bold; margin-top:10px; }
+.note { font-size:14px; color:#555; }
+table { border-collapse:collapse; }
+th, td { vertical-align:top; }
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="inst">ENGFORD | Home of IELTS</div>
+<h1>IELTS Listening Test</h1>
+</header>
+
+<!-- ================= STUDENT INFORMATION ================= -->
+<div class="container" id="studentInfo">
+<h2>Student Information</h2>
+
+<div class="box">
+<p><strong>Student Name:</strong><br><input type="text" id="s_name"></p>
+<p><strong>Father Name:</strong><br><input type="text" id="s_father"></p>
+<p><strong>Email Address:</strong><br><input type="email" id="s_email"></p>
+<p><strong>Age:</strong><br><input type="number" id="s_age"></p>
+<p><strong>Date of Birth:</strong><br><input type="date" id="s_dob"></p>
+<p><strong>NIC Number:</strong><br><input type="text" id="s_nic"></p>
+</div>
+
+<button onclick="startTest()">Start Test</button>
+</div>
+
+<!-- ================= SECTION 1 ================= -->
+<div class="container hidden" id="section1">
+<h2>SECTION 1 – Questions 1–10</h2>
+
+<div class="box">
+<p><strong>LIBRARY INFORMATION</strong></p>
+
+<p><strong>Example</strong><br>Minimum joining age: <strong>18 years</strong></p>
+
+<p><strong>For registration, must take</strong><br>
+• two (1) <input id="q1"><br>
+• two forms of I.D. e.g. driving licence, (2) <input id="q2"></p>
+
+<p>Cost to join per year: £3 (3) <input id="q3"></p>
+<p>Number of items allowed: (4) <input id="q4"></p>
+<p>Loan time: four weeks</p>
+<p>Fines start at £5 (5) <input id="q5"></p>
+<p>Computers can be booked (6) <input id="q6"> hours in advance</p>
+<p>Library holds national papers, all (7) <input id="q7"></p>
+<p>Need (8) <input id="q8"> to use photocopier</p>
+
+<p><strong>Creative Writing class</strong><br>
+• tutor is John (9) <input id="q9"><br>
+• held on (10) <input id="q10"> evenings</p>
+</div>
+
+<button onclick="submitSection1()">Submit Section 1</button>
+<button onclick="clearSection1()">Clear</button>
+<div class="result" id="result1"></div>
+<button id="nextBtn" class="hidden" onclick="goToSection2()">Next Section</button>
+</div>
+
+<!-- ================= SECTION 2 ================= -->
+<div class="container hidden" id="section2">
+<h2>SECTION 2 – Questions 11–20</h2>
+
+<h3>Questions 11–15</h3>
+
+<div class="mcq" id="q11b">
+<p>11. In 1993 Dan Pearman went to Ecuador</p>
+<label><input type="radio" name="q11" value="A"> A as a tourist guide</label><br>
+<label><input type="radio" name="q11" value="B"> B as part of his studies</label><br>
+<label><input type="radio" name="q11" value="C"> C as a voluntary worker</label>
+</div>
+
+<div class="mcq" id="q12b">
+<p>12. Dan’s neighbour was successful in business because he</p>
+<label><input type="radio" name="q12" value="A"> A employed carpenters</label><br>
+<label><input type="radio" name="q12" value="B"> B was the most skilled</label><br>
+<label><input type="radio" name="q12" value="C"> C found it easy to reach customers</label>
+</div>
+
+<div class="mcq" id="q13b">
+<p>13. Dan says the charity relies on</p>
+<label><input type="radio" name="q13" value="A"> A getting enough bicycles</label><br>
+<label><input type="radio" name="q13" value="B"> B finding new areas</label><br>
+<label><input type="radio" name="q13" value="C"> C charging for bicycles</label>
+</div>
+
+<div class="mcq" id="q14b">
+<p>14. What does Dan say about the town of Rivas?</p>
+<label><input type="radio" name="q14" value="A"> A greatest number of bikes</label><br>
+<label><input type="radio" name="q14" value="B"> B almost as many as Amsterdam</label><br>
+<label><input type="radio" name="q14" value="C"> C economy transformed</label>
+</div>
+
+<div class="mcq" id="q15b">
+<p>15. What problem did the charity face in August 2000?</p>
+<label><input type="radio" name="q15" value="A"> A criticised in the British media</label><br>
+<label><input type="radio" name="q15" value="B"> B delayed sending bikes</label><br>
+<label><input type="radio" name="q15" value="C"> C couldn’t meet overheads</label>
+</div>
+
+<h3>Questions 16–17</h3>
+<p>16. How much money did the charity receive when it won an award?<br>
+<input id="q16"></p>
+
+<p>17. What is the charity currently hoping to buy?<br>
+<input id="q17"></p>
+
+<h3>Questions 18–20</h3>
+<p><strong>Choose THREE letters A–G.</strong></p>
+
+<div class="mcq" id="q18_20">
+<label><input type="checkbox" class="limit3" value="A"> A organise a bicycle collection</label><br>
+<label><input type="checkbox" class="limit3" value="B"> B repair the donated bikes</label><br>
+<label><input type="checkbox" class="limit3" value="C"> C donate their unwanted tools</label><br>
+<label><input type="checkbox" class="limit3" value="D"> D do voluntary work in its office</label><br>
+<label><input type="checkbox" class="limit3" value="E"> E hold an event to raise money</label><br>
+<label><input type="checkbox" class="limit3" value="F"> F identify areas that need bikes</label><br>
+<label><input type="checkbox" class="limit3" value="G"> G write to the government</label>
+</div>
+
+<button onclick="submitSection2()">Submit Section 2</button>
+<button onclick="goBack()">Back to Section 1</button>
+<button onclick="goToSection3()">Next Section</button>
+
+<div class="result" id="result2"></div>
+</div>
+
+<!-- ================= SECTION 3 ================= -->
+<div class="container hidden" id="section3">
+<h2>SECTION 3 – Questions 21–30</h2>
+
+<p><strong>Complete the table below.</strong></p>
+<p class="note">Write <strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></p>
+
+<div class="box">
+<p style="text-align:center;"><strong>‘Student Life’ video project</strong></p>
+
+<table border="1" width="100%" cellpadding="8">
+<tr>
+<th></th>
+<th>Cristina</th>
+<th>Ibrahim</th>
+</tr>
+
+<tr>
+<td><strong>Enjoyed:</strong></td>
+<td>• using the camera<br>• going to a British (21) <input id="q21"></td>
+<td>contact with students doing other courses<br>(has asked some to (22) <input id="q22"> with him)</td>
+</tr>
+
+<tr>
+<td><strong>Most useful language practice:</strong></td>
+<td>• listening to instructions<br>• learning (23) <input id="q23"> vocabulary</td>
+<td>listening to British students’ language because of:<br>– normal speed<br>– large amount of (24) <input id="q24"></td>
+</tr>
+
+<tr>
+<td><strong>General usefulness:</strong></td>
+<td>• operating video camera<br>• working with other people:<br>– learning about (25) <input id="q25"><br>– compromising<br>– (26) <input id="q26"> people who have different views</td>
+<td>the importance of (27) <input id="q27"></td>
+</tr>
+
+<tr>
+<td><strong>Things to do differently in future:</strong></td>
+<td>• decide when to (28) <input id="q28"> each stage at the beginning<br>• make more effort to (29) <input id="q29"> with the camera</td>
+<td>don’t make the film too (30) <input id="q30"></td>
+</tr>
+</table>
+</div>
+
+<button onclick="submitSection3()">Submit Section 3</button>
+<button onclick="goBackToSection2()">Back to Section 2</button>
+<button onclick="goToSection4()">Next Section</button>
+
+<div class="result" id="result3"></div>
+</div>
+
+<!-- ================= SECTION 4 ================= -->
+<div class="container hidden" id="section4">
+<h2>SECTION 4 – Questions 31–40</h2>
+
+<p><strong>Complete the notes below.</strong></p>
+<p class="note">Write <strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></p>
+
+<div class="box">
+<p style="text-align:center;"><strong>ANTARCTICA</strong></p>
+
+<p><strong>GEOGRAPHY</strong></p>
+<p>• world’s highest, coldest and windiest continent</p>
+<p>• more than (31) <input id="q31"> times as big as the UK</p>
+<p>• most of the area is classified as (32) <input id="q32"></p>
+
+<p><strong>RESEARCH STATIONS</strong></p>
+<p>• international teams work together</p>
+<p>• (33) <input id="q33"> is integrated with technical support</p>
+<p>• stations contain accommodation, work areas, a kitchen, a (34) <input id="q34"> and a gym</p>
+<p>• supplies were brought to Zero One station by sledge from a (35) <input id="q35"> at the edge of the ice 15 km away</p>
+<p>• problem of snow build-ups solved by building stations on (36) <input id="q36"> with adjustable legs</p>
+
+<p><strong>FOOD AND DIET</strong></p>
+<p>• average daily requirement for an adult in Antarctica is approximately (37) <input id="q37"> kilocalories</p>
+
+<p><strong>RESEARCH</strong></p>
+<p>• measuring changes in the ice-cap (effects on sea levels and (38) <input id="q38">)</p>
+<p>• analysing air from bubbles in ice to measure (39) <input id="q39"> caused by human activity</p>
+
+<p><strong>WORK OPPORTUNITIES</strong></p>
+<p>• many openings for (40) <input id="q40"> people including research assistants and administrative and technical positions</p>
+</div>
+
+<button onclick="submitSection4()">Submit Section 4</button>
+<button onclick="goBackToSection3()">Back to Section 3</button>
+
+<div class="result" id="result4"></div>
+</div>
+
+<!-- ================= FINAL PAGE ================= -->
+<div class="container hidden" id="finalPage">
+<h2>IELTS Listening – Final Result</h2>
+
+<div class="box">
+<p><strong>Section 1:</strong> <span id="fs1"></span> / 10</p>
+<p><strong>Section 2:</strong> <span id="fs2"></span> / 10</p>
+<p><strong>Section 3:</strong> <span id="fs3"></span> / 10</p>
+<p><strong>Section 4:</strong> <span id="fs4"></span> / 10</p>
+
+<hr>
+
+<p><strong>Total Score:</strong> <span id="ftotal"></span> / 40</p>
+<p style="font-size:22px;"><strong>Estimated Band Score:</strong> <span id="fband"></span> / 9</p>
+</div>
+</div>
+
+<script>
+let section1Correct=0, section2Correct=0, section3Correct=0, section4Correct=0;
+
+const sec1Answers={q1:["passport photos","passport photographs"],q2:["bank statement"],q3:["125"],q4:["8"],q5:["1.50","1.5"],q6:["48"],q7:["local papers","local newspapers"],q8:["card","cards"],q9:["grantingham"],q10:["friday"]};
+const sec2MCQ={q11:"C",q12:"C",q13:"A",q14:"C",q15:"A"};
+const sec2Text={q16:["75000","£75000","75,000","£75,000"],q17:["computer","computers"]};
+const sec2Multi=["C","E","F"];
+const sec3Answers={q21:["home","student's home"],q22:["have dinner","come to dinner","go to dinner"],q23:["technical"],q24:["slang"],q25:["cooperating","cooperation"],q26:["persuading"],q27:["editing"],q28:["complete"],q29:["experiment"],q30:["long"]};
+const sec4Answers={q31:["58"],q32:["desert"],q33:["science"],q34:["hospital","small hospital"],q35:["ship"],q36:["platforms"],q37:["3500","3,500"],q38:["currents","ocean currents"],q39:["pollution","the pollution"],q40:["young"]};
+
+document.querySelectorAll(".limit3").forEach(cb=>{
+ cb.addEventListener("change",()=>{
+  if(document.querySelectorAll(".limit3:checked").length>3) cb.checked=false;
+ });
+});
+
+function startTest(){
+ let ids=["s_name","s_father","s_email","s_age","s_dob","s_nic"];
+ let ok=true;
+ ids.forEach(id=>{
+  let e=document.getElementById(id);
+  e.classList.remove("wrong");
+  if(!e.value){e.classList.add("wrong");ok=false;}
+ });
+ if(!ok){alert("Please fill in all student information.");return;}
+ studentInfo.classList.add("hidden");
+ section1.classList.remove("hidden");
+}
+
+function submitSection1(){
+ section1Correct=0;
+ for(let q in sec1Answers){
+  let e=document.getElementById(q);
+  e.classList.remove("wrong");
+  if(sec1Answers[q].includes(e.value.trim().toLowerCase())) section1Correct++;
+  else e.classList.add("wrong");
+ }
+ result1.innerText="Section 1 Correct: "+section1Correct;
+ nextBtn.classList.remove("hidden");
+}
+
+function clearSection1(){
+ for(let q in sec1Answers){
+  let e=document.getElementById(q);
+  e.value="";
+  e.classList.remove("wrong");
+ }
+ result1.innerText="";
+}
+
+function submitSection2(){
+ section2Correct=0;
+ document.querySelectorAll(".mcq").forEach(m=>m.classList.remove("wrong"));
+ for(let q in sec2MCQ){
+  let s=document.querySelector(`input[name="${q}"]:checked`);
+  if(s && s.value===sec2MCQ[q]) section2Correct++;
+  else document.getElementById(q+"b").classList.add("wrong");
+ }
+ for(let q in sec2Text){
+  let e=document.getElementById(q);
+  e.classList.remove("wrong");
+  if(sec2Text[q].includes(e.value.trim().toLowerCase())) section2Correct++;
+  else e.classList.add("wrong");
+ }
+ let c=[...document.querySelectorAll(".limit3:checked")].map(x=>x.value);
+ if(c.length===3 && sec2Multi.every(x=>c.includes(x))) section2Correct++;
+ else q18_20.classList.add("wrong");
+ result2.innerText="Section 2 Correct: "+section2Correct+" / 10";
+}
+
+function submitSection3(){
+ section3Correct=0;
+ for(let q in sec3Answers){
+  let e=document.getElementById(q);
+  e.classList.remove("wrong");
+  if(sec3Answers[q].includes(e.value.trim().toLowerCase())) section3Correct++;
+  else e.classList.add("wrong");
+ }
+ result3.innerText="Section 3 Correct: "+section3Correct+" / 10";
+}
+
+function submitSection4(){
+ section4Correct=0;
+ for(let q in sec4Answers){
+  let e=document.getElementById(q);
+  e.classList.remove("wrong");
+  if(sec4Answers[q].includes(e.value.trim().toLowerCase())) section4Correct++;
+  else e.classList.add("wrong");
+ }
+ result4.innerText="Section 4 Correct: "+section4Correct+" / 10";
+ showFinalPage();
+}
+
+function showFinalPage(){
+ let total=section1Correct+section2Correct+section3Correct+section4Correct;
+ let band=((total/40)*9).toFixed(2);
+ fs1.innerText=section1Correct;
+ fs2.innerText=section2Correct;
+ fs3.innerText=section3Correct;
+ fs4.innerText=section4Correct;
+ ftotal.innerText=total;
+ fband.innerText=band;
+ section4.classList.add("hidden");
+ finalPage.classList.remove("hidden");
+}
+
+function goToSection2(){section1.classList.add("hidden");section2.classList.remove("hidden");}
+function goBack(){section2.classList.add("hidden");section1.classList.remove("hidden");}
+function goToSection3(){section2.classList.add("hidden");section3.classList.remove("hidden");}
+function goBackToSection2(){section3.classList.add("hidden");section2.classList.remove("hidden");}
+function goToSection4(){section3.classList.add("hidden");section4.classList.remove("hidden");}
+function goBackToSection3(){section4.classList.add("hidden");section3.classList.remove("hidden");}
+</script>
+
+</body>
+</html>
